@@ -42,6 +42,9 @@ class session{
         temr2=temr2["st"];
         return temr2-temr1;
     }
+    no_sessions() {
+        return this.sessions;
+    }
 }
 class wsession extends session{
     constructor() {
