@@ -43,3 +43,27 @@ class session{
         return temr2-temr1;
     }
 }
+class wsession extends session{
+    constructor() {
+        this.handle=window.addEventListner("load",function(){
+            window.addEventListner("onfocus",function(){
+                this.starw();
+            })
+            window.addEventListner("onblur",function(){
+                this.stopw();
+            })
+        });    
+    }
+    starw() {
+        this.startd();
+    }
+    stopw() {
+        this.stopd();
+    }
+    active_time(id) {
+        return this.get_diff(id);
+    }
+    out_time(id1,id2){
+        return this.get_diff_sessions(id1,id2);
+    }
+}
